@@ -1,4 +1,6 @@
 import { google } from 'googleapis';
+import { motion } from 'framer-motion';
+
 
 export default async function handler(req, res) {
   try {
@@ -8,8 +10,8 @@ export default async function handler(req, res) {
     });
     const { data } = await youtube.search.list({
       part: 'snippet',
-      channelId: 'UC_x5XG1OV2P6uZZ5FSM9Ttw', // replace with your channel ID
-      maxResults: 10,
+      channelId: 'UChOIeBWpgfnSYN9nk1Ns0Bw', // replace with your channel ID
+      maxResults: 98,
       type: 'video'
     });
     const videos = data.items.map((item) => ({
