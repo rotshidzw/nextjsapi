@@ -62,14 +62,12 @@ const Layout = ({ children, title = 'Next.js App' }) => {
             </button>
           </div> 
           <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
-            <div className="flex-shrink-0">
-              <Link legacyBehavior href="/">
+            
               <div className="flex-shrink-0">
              {/* eslint-disable no-alert, no-console */}
                 <img className="h-10 w-10 rounded-full" src="https://yt3.googleusercontent.com/a4ixgygIQbqBdk1jhWg-wwhY1YQnTEA26k2Bd8peqET3Q7jtYYVcN0YqvoY22HHk85_7Q4lBPQ=s176-c-k-c0x00ffffff-no-rj" alt="Logo" />
-              </div>
-              </Link>
-            </div>
+              </div>  
+            
             <div className="hidden sm:block sm:ml-6">
               <div className="flex space-x-4">
               <Link legacyBehavior href="/">
