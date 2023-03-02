@@ -1,8 +1,10 @@
 import React from 'react'
 import Layout from '../components/Layout';
 import Head from 'next/head';
+import ErrorBoundary from './ErrorBoundary';
 const about = () => {
   return (
+    <ErrorBoundary>
     <Layout title="Home Page">
    
       <Head>
@@ -70,6 +72,7 @@ const about = () => {
 </div>
 
     </Layout>
+    </ErrorBoundary>
   )
 }
 

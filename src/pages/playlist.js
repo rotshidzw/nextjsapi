@@ -3,10 +3,12 @@ import React from 'react';
 import Layout from '../components/Layout';
 import { motion } from 'framer-motion';
 import axios from 'axios';
+import ErrorBoundary from './ErrorBoundary';
 
 function Playlist({ playlist, videos }) {
   return (
-    <Layout title={playlist.title}>
+    <ErrorBoundary>
+   <Layout title={playlist.title}>
       <div
         className="h-screen overflow-hidden relative"
         style={{ backgroundImage: `url('https://media.pitchfork.com/photos/633443581dccce609e4163c5/3:2/w_3000,h_2000,c_limit/Anti-da-Menace-Legendary.jpg')`}}
@@ -40,6 +42,7 @@ function Playlist({ playlist, videos }) {
         </div>
       </div></div>
     </Layout>
+    </ErrorBoundary>
   );
 }
 

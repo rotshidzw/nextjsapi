@@ -1,11 +1,12 @@
  /* eslint-disable no-alert, no-console */
 import Layout from '../components/Layout';
-
+import ErrorBoundary from './ErrorBoundary';
 const contact = () => {
 
 
   return (
-    <Layout title="Contact Us" className="">
+    <ErrorBoundary>
+   <Layout title="Contact Us" className="">
       <div className="max-w-screen-lg mx-auto ">
         <h2 className="text-4xl font-bold tracking-tight text-black sm:text-6xl text-center">
           Contact Us
@@ -71,7 +72,7 @@ const contact = () => {
           </form>
         </div>
     </Layout>
-
+    </ErrorBoundary>
   )
 }
 
