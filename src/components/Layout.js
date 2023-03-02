@@ -1,4 +1,4 @@
- /* eslint-disable no-alert, no-console */
+{/* eslint-disable no-alert, no-console */}
 import Head from 'next/head';
 import Link from 'next/link';
 import { useState } from 'react';
@@ -15,7 +15,7 @@ const Layout = ({ children, title = 'Next.js App' }) => {
      
       <nav className="bg-black ">
         
-      <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-20">
+      <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-96">
         <div className="relative flex items-center justify-between h-16">
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
             <button
@@ -60,12 +60,12 @@ const Layout = ({ children, title = 'Next.js App' }) => {
                 </svg>
               )}
             </button>
-          </div> /* eslint-disable no-alert, no-console */
+          </div> 
           <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
             <div className="flex-shrink-0">
               <Link legacyBehavior href="/">
               <div className="flex-shrink-0">
-             
+             {/* eslint-disable no-alert, no-console */}
                 <img className="h-10 w-10 rounded-full" src="https://yt3.googleusercontent.com/a4ixgygIQbqBdk1jhWg-wwhY1YQnTEA26k2Bd8peqET3Q7jtYYVcN0YqvoY22HHk85_7Q4lBPQ=s176-c-k-c0x00ffffff-no-rj" alt="Logo" />
               </div>
               </Link>
@@ -73,24 +73,24 @@ const Layout = ({ children, title = 'Next.js App' }) => {
             <div className="hidden sm:block sm:ml-6">
               <div className="flex space-x-4">
               <Link legacyBehavior href="/">
-                  <a className="text-white hover:bg-gray-800 hover:text-white px-3 py-2 rounded-md text-md italic font-bold">
+                  <span className="text-white hover:bg-gray-800 hover:text-white px-3 py-2 rounded-md text-md italic font-bold">
                 Home
-                  </a>
+                  </span>
                 </Link>
                 <Link legacyBehavior href="/about">
-                  <a className="text-white hover:bg-gray-800 hover:text-white px-3 py-2 rounded-md text-md italic font-bold">
+                  <span className="text-white hover:bg-gray-800 hover:text-white px-3 py-2 rounded-md text-md italic font-bold">
                     About
-                  </a>
+                  </span>
                 </Link>
                 <Link legacyBehavior href="/playlist">
-                  <a className="text-white hover:bg-gray-800 hover:text-white px-3 py-2 rounded-md text-md italic font-bold">
+                  <span className="text-white hover:bg-gray-800 hover:text-white px-3 py-2 rounded-md text-md italic font-bold">
                     PlayList
-                  </a>
+                  </span>
                 </Link>
                 <Link legacyBehavior href="/contact">
-                  <a className="text-white hover:bg-gray-800 hover:text-white px-3 py-2 rounded-md text-md italic font-bold">
+                  <span className="text-white hover:bg-gray-800 hover:text-white px-3 py-2 rounded-md text-md italic font-bold">
                     Contact
-                  </a>
+                  </span>
                 </Link>
               </div>
             </div>
@@ -104,30 +104,30 @@ const Layout = ({ children, title = 'Next.js App' }) => {
   id="mobile-menu"
 >
   <div className="px-2 pt-2 pb-3 space-y-1">
-    <a
+    <span
       href="/index"
       className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
     >
       Home
-    </a>
-    <a
+    </span>
+    <span
       href="/about"
       className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
     >
       About
-    </a>
-    <a
+    </span>
+    <span
       href="/playlist"
       className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
     >
       PlayList
-    </a>
-    <a
+    </span>
+    <span
       href="contact"
       className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
     >
       Contact
-    </a>
+    </span>
   </div>
 </div>
 </nav>
