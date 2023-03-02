@@ -1,3 +1,4 @@
+ /* eslint-disable no-alert, no-console */
 import Head from 'next/head';
 import Link from 'next/link';
 import { useState } from 'react';
@@ -14,7 +15,7 @@ const Layout = ({ children, title = 'Next.js App' }) => {
      
       <nav className="bg-black ">
         
-      <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-96">
+      <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-20">
         <div className="relative flex items-center justify-between h-16">
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
             <button
@@ -59,11 +60,12 @@ const Layout = ({ children, title = 'Next.js App' }) => {
                 </svg>
               )}
             </button>
-          </div>
+          </div> /* eslint-disable no-alert, no-console */
           <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
             <div className="flex-shrink-0">
               <Link legacyBehavior href="/">
               <div className="flex-shrink-0">
+             
                 <img className="h-10 w-10 rounded-full" src="https://yt3.googleusercontent.com/a4ixgygIQbqBdk1jhWg-wwhY1YQnTEA26k2Bd8peqET3Q7jtYYVcN0YqvoY22HHk85_7Q4lBPQ=s176-c-k-c0x00ffffff-no-rj" alt="Logo" />
               </div>
               </Link>
