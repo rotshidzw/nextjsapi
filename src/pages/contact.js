@@ -1,4 +1,4 @@
- /* eslint-disable no-alert, no-console */
+
 import Layout from '../components/Layout';
 import ErrorBoundary from './ErrorBoundary';
 const contact = () => {

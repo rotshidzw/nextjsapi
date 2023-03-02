@@ -1,4 +1,4 @@
-{/* eslint-disable no-alert, no-console */}
+
 import Head from 'next/head';
 import Link from 'next/link';
 import { useState } from 'react';

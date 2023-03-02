@@ -1,4 +1,3 @@
- /* eslint-disable no-alert, no-console */
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import Layout from '../components/Layout';
