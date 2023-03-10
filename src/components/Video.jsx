@@ -1,9 +1,8 @@
-import React from 'react';
-import { useEffect, useState } from 'react';
+import { React, useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import Layout from '../components/Layout';
 
-export default function Videos() {
+export default function Video() {
   const [videos, setVideos] = useState([]);
 
   useEffect(() => {
@@ -16,16 +15,16 @@ export default function Videos() {
   }, []);
 
   return (
-    
-      <Layout title="Home Page">
-        <div
-          className="bg-cover bg-no-repeat bg-center h-screen"
-          style={{ backgroundImage: `url('https://dailychiefers.com/wp-content/media/2022/09/Screen-Shot-2022-09-14-at-3.00.46-PM.png')` }}
-        >
-          <div className="max-w-screen-lg mx-auto h-screen flex flex-col justify-center">
-            <h2 className="text-4xl font-bold tracking-tight text-black sm:text-6xl text-center">952 Da Label 😈</h2>
-            <h2 className="text-3xl font-bold text-center mb-8">Videos</h2>
-            <div className="flex-grow overflow-y-scroll">
+    <Layout title="Home Page">
+      <div
+        className="bg-cover bg-no-repeat bg-center h-screen"
+        style={{ backgroundImage: `url('https://dailychiefers.com/wp-content/media/2022/09/Screen-Shot-2022-09-14-at-3.00.46-PM.png')` }}
+      >
+        <div className="max-w-screen-lg mx-auto h-screen flex flex-col justify-center">
+          <h2 className="text-4xl font-bold tracking-tight text-black sm:text-6xl text-center">952 Da Label 😈</h2>
+          <h2 className="text-3xl font-bold text-center mb-8">Videos</h2>
+          <div className="flex-grow overflow-y-scroll">
+            {videos && videos.length > 0 && (
               <ul className="flex flex-wrap justify-center">
                 {videos.map((video) => (
                   <motion.li
@@ -63,10 +62,10 @@ export default function Videos() {
                   </motion.li>
                 ))}
               </ul>
-            </div>
+            )}
           </div>
         </div>
-      </Layout>
-    
+      </div>
+    </Layout>
   );
 }
