@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import axios from 'axios';
 import ErrorBoundary from './ErrorBoundary';
 
+
 function Playlist({ playlist, videos }) {
   return (
     <ErrorBoundary>
@@ -47,10 +48,10 @@ function Playlist({ playlist, videos }) {
 }
 
 export async function getServerSideProps() {
-  const playlistId = 'PL2Nc0vlZLqflKcZGk2aBgJj0ZlwYR6AGP';
-  const apiKey = 'AIzaSyAbbXpzVK4jD_ILNRZLBhD89BSn3vu726k';
+  const playlistId = 'PL2Nc0vlZLqfmZGRZ8hxzulW9lx5arHxXJ';
+  const apiKey = process.env.API_KEY;
   const playlistUrl = `https://www.googleapis.com/youtube/v3/playlists?id=${playlistId}&part=snippet&key=${apiKey}`;
-  const playlistItemsUrl = `https://www.googleapis.com/youtube/v3/playlistItems?playlistId=${playlistId}&part=snippet&key=${apiKey}`;
+  const playlistItemsUrl = `https://www.googleapis.com/youtube/v3/playlistItems?playlistId=${playlistId}&part=snippet&maxResults=50&key=${apiKey}`;
 
   try {
     // Fetch playlist info
