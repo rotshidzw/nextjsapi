@@ -23,7 +23,7 @@ export default function Videos() {
           <h2 className="text-4xl font-bold tracking-tight text-black sm:text-6xl text-center">952 Da Label 😈</h2>
           <h2 className="text-3xl font-bold text-center mb-8">Videos</h2>
           <div className="flex-grow overflow-y-scroll">
-            {videos && videos.length > 0 ? (
+            {videos && videos.length > 0 && (
               <ul className="flex flex-wrap justify-center">
                 {videos.map((video) => (
                   <motion.li
@@ -47,21 +47,26 @@ export default function Videos() {
                           animate={{ opacity: 1 }}
                           transition={{ duration: 0.5, delay: 0.25 }}
                         />
-                        <motion.div
-                          className="absolute inset-0 bg-black bg-opacity-30 opacity-0 group-hover:opacity-100 transition duration-300"
-                          initial={{ opacity: 0 }}
-                          animate={{ opacity: 1 }}
-                          transition={{ duration: 0.5, delay: 0.5 }}
-                        >
-                          <h3 className="text-white font-bold text-lg mb-2 px-4 py-2">{video.title}</h3>
-                          <p className="text-white opacity-75 px-4 py-2">{video.description}</p>
-                        </motion.div>
+                        {video.title && (
+                          <motion.div
+                            className="absolute inset-0 bg-black bg-opacity-30 opacity-0 group-hover:opacity-100 transition duration-300"
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            transition={{ duration: 0.5, delay: 0.5 }}
+                          >
+                            <h3 className="text-white font-bold text-lg mb-2 px-4 py-2">{video.title}</h3>
+                            {video.description && (
+                              <p className="text-white opacity-75 px-4 py-2">{video.description}</p>
+                            )}
+                          </motion.div>
+                        )}
                       </motion.div>
                     </a>
                   </motion.li>
                 ))}
               </ul>
-            ) : (
+            )}
+            {!videos || videos.length === 0 && (
               <p>No videos found.</p>
             )}
           </div>
