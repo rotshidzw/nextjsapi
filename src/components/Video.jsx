@@ -23,7 +23,7 @@ export default function Videos() {
           <h2 className="text-4xl font-bold tracking-tight text-black sm:text-6xl text-center">952 Da Label 😈</h2>
           <h2 className="text-3xl font-bold text-center mb-8">Videos</h2>
           <div className="flex-grow overflow-y-scroll">
-            {videos && videos.length > 0 && (
+            {videos && videos.length > 0 ? (
               <ul className="flex flex-wrap justify-center">
                 {videos.map((video) => (
                   <motion.li
@@ -61,6 +61,8 @@ export default function Videos() {
                   </motion.li>
                 ))}
               </ul>
+            ) : (
+              <p>No videos found.</p>
             )}
           </div>
         </div>
