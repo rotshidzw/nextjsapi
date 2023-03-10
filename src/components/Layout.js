@@ -102,30 +102,34 @@ const Layout = ({ children, title = 'Next.js App' }) => {
   id="mobile-menu"
 >
   <div className="px-2 pt-2 pb-3 space-y-1">
+  <Link legacyBehavior href="/">
     <span
-      href="/index"
       className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
     >
       Home
     </span>
+    </Link>
+    <Link legacyBehavior href="/about">
     <span
-      href="/about"
       className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
     >
       About
     </span>
+    </Link>
+    <Link legacyBehavior href="/playlist">
     <span
-      href="/playlist"
       className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
     >
       PlayList
     </span>
+</Link>
+    <Link legacyBehavior href="/contact">
     <span
-      href="contact"
       className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
     >
       Contact
     </span>
+    </Link>
   </div>
 </div>
 </nav>
