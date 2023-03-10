@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import Layout from '../components/Layout';
 
-export default function Video() {
+export default function Videos() {
   const [videos, setVideos] = useState([]);
 
   useEffect(() => {
@@ -16,8 +16,7 @@ export default function Video() {
 
   return (
     <Layout title="Home Page">
-      <div
-        className="bg-cover bg-no-repeat bg-center h-screen"
+      <div className="bg-cover bg-no-repeat bg-center h-screen"
         style={{ backgroundImage: `url('https://dailychiefers.com/wp-content/media/2022/09/Screen-Shot-2022-09-14-at-3.00.46-PM.png')` }}
       >
         <div className="max-w-screen-lg mx-auto h-screen flex flex-col justify-center">
