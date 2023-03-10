@@ -49,7 +49,7 @@ function Playlist({ playlist, videos }) {
 
 export async function getServerSideProps() {
   const playlistId = 'PL2Nc0vlZLqfmZGRZ8hxzulW9lx5arHxXJ';
-  const apiKey = process.env.API_KEY;
+  const apiKey = 'AIzaSyAbbXpzVK4jD_ILNRZLBhD89BSn3vu726k';
   const playlistUrl = `https://www.googleapis.com/youtube/v3/playlists?id=${playlistId}&part=snippet&key=${apiKey}`;
   const playlistItemsUrl = `https://www.googleapis.com/youtube/v3/playlistItems?playlistId=${playlistId}&part=snippet&maxResults=50&key=${apiKey}`;
 
